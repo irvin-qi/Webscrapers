@@ -39,9 +39,9 @@ def scrape_substack_article(article_url):
     finally:
         driver.quit()
 
-
+# Test method to scrape an individual Substack article
 if __name__ == "__main__":
-    # Replace with a valid Substack article URL
+    # Hardcoded URL to an individual Substack article
     url = "https://substack.com/home/post/p-155873854"
 
     # Scrape the article
