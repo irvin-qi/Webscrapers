@@ -1,5 +1,3 @@
-from substack_scraper import scrape_substack_article
-from scrape_all_articles import scrape_author_page
 from save_to_csv import save_data
 
 if __name__ == "__main__":

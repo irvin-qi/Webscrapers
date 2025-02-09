@@ -4,15 +4,6 @@ import time
 from datetime import datetime
 
 def scrape_substack_article(article_url, min_date):
-    """
-    Efficiently scrapes a Substack article, prioritizing date extraction first.
-    If the date meets the `min_date` requirement, only then it loads the rest of the content.
-
-    :param article_url: URL of the article to scrape
-    :param min_date: Minimum date (format: 'YYYY-MM-DD'). The article must be on or after this date.
-    :return: Dictionary containing article details if conditions are met, otherwise None.
-    """
-
     # Using Chrome driver
     driver = webdriver.Chrome()
 

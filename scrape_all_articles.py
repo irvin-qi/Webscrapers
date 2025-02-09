@@ -17,11 +17,6 @@ from substack_scraper import scrape_substack_article
 
 
 def get_user_date():
-    """
-    Opens a calendar-based date selector GUI. If GUI fails, defaults to "2025-01-01".
-    
-    :return: Date string in 'YYYY-MM-DD' format
-    """
     default_date = "2025-01-01"
 
     if GUI_ENABLED:
@@ -79,15 +74,6 @@ def get_user_date():
 
 
 def scrape_author_page(author_url):
-    """
-    Scrapes an author's Substack page for article links, then uses a user-selected date
-    to filter and retrieve only newer articles. Early termination occurs if an article
-    is older than the chosen date.
-    
-    :param author_url: The URL of the Substack author page
-    :return: List of articles (title, date, body, source) that meet the date requirement
-    """
-
     # Get the date directly inside this function (no more min_date argument).
     min_date = get_user_date()  
 

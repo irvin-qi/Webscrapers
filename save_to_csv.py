@@ -2,11 +2,6 @@ import csv
 from scrape_all_articles import scrape_author_page
 
 def save_data(author_url):
-    """
-    Scrapes articles from a Substack author page and saves the data to a CSV file.
-    :param author_url: URL of the Substack author's page
-    """
-
     # Get all article data from the author's page
     all_articles = scrape_author_page(author_url)
 
