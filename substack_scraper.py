@@ -87,25 +87,3 @@ def scrape_substack_article(article_url, min_date):
 
     finally:
         driver.quit()
-
-if __name__ == "__main__":
-    # Hardcoded URL to an individual Substack article
-    url = "https://substack.com/home/post/p-155873854"
-    
-    # Define the minimum acceptable date
-    min_date = "2025-01-01"  # Only scrape if the article is from Jan 1, 2025, or later
-
-    # Scrape the article
-    article_data = scrape_substack_article(url, min_date)
-
-    if article_data:
-        print("\n✅ Scraped Article Data:")
-        print("Article_Title:", article_data["Article_Title"])
-        print("Article_Author:", article_data["Article_Author"])
-        print("Article_Source:", article_data["Article_Source"])
-        print("Article_Posted_Date (Epoch):", article_data["Article_Posted_Date"])
-        print("Article_Link:", article_data["Article_Link"])
-        print("Article_Body (Preview):", article_data["Article_Body"][:500], "...")  # First 500 chars
-        print("Metadata:", article_data["Metadata"])
-    else:
-        print("No article was scraped because it did not meet the date criteria.")
